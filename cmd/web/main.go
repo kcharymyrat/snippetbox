@@ -1,10 +1,13 @@
 package main
 
 import (
+	"database/sql"
 	"flag"
 	"log"
 	"net/http"
 	"os"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 // Struct to hold the application-wide dependencies
@@ -14,11 +17,14 @@ type application struct {
 }
 
 func main() {
-	addr := flag.String("addr", ":4000", "HTTP network address")
-	flag.Parse()
-
 	// Also we could use environment variables
 	// addr := os.Getenv("SNIPPETBOX_ADDR")
+
+	addr := flag.String("addr", ":4000", "HTTP network address")
+
+	// Define a new command-line flag for the MySQL DSN string.
+	dsn := flag.String("dsn", "web:web@/snippetbox?parseTime=true", "MySQL data source name")
+	flag.Parse()
 
 	// Logging
 	// infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
@@ -32,33 +38,37 @@ func main() {
 	defer f.Close()
 	infoLog := log.New(f, "INFO\t", log.Ldate|log.Ltime)
 
+	db, err := openDB(*dsn)
+	if err != nil {
+		errorLog.Fatal(err)
+	}
+	defer db.Close()
+
 	// Initialize a new instance of our application struct, containing the dependencies.
 	app := &application{
 		errorLog: errorLog,
 		infoLog:  infoLog,
 	}
 
-	// router - controller
-	mux := http.NewServeMux()
-
-	filseServer := http.FileServer(http.Dir("./ui/static/"))
-
-	mux.Handle("/static/", http.StripPrefix("/static", filseServer))
-
-	mux.HandleFunc("/", app.home)
-	mux.HandleFunc("/snippet/view", app.snippetView)
-	mux.HandleFunc("/snippet/create", app.snippetCreate)
-
-	mux.HandleFunc("/download", app.downloadLogo)
-
 	// Initialize a new http.Server
 	srv := &http.Server{
 		Addr:     *addr,
 		ErrorLog: errorLog,
-		Handler:  mux,
+		Handler:  app.routes(),
 	}
 
 	infoLog.Printf("Starting server on %s\n", *addr)
-	err := srv.ListenAndServe()
+	err = srv.ListenAndServe()
 	errorLog.Fatal(err)
+}
+
+func openDB(dsn string) (*sql.DB, error) {
+	db, err := sql.Open("mysql", dsn)
+	if err != nil {
+		return nil, err
+	}
+	if err = db.Ping(); err != nil {
+		return nil, err
+	}
+	return db, nil
 }
