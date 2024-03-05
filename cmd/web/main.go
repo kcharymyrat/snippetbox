@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"flag"
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -56,6 +57,7 @@ func main() {
 	if err != nil {
 		errorLog.Fatal(err)
 	}
+	fmt.Printf("templateCache = %v\n", templateCache)
 
 	// Initialize a new instance of our application struct, containing the dependencies.
 	app := &application{
