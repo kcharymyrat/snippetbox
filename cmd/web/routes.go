@@ -2,7 +2,7 @@ package main
 
 import "net/http"
 
-func (app *application) routes() *http.ServeMux {
+func (app *application) routes() http.Handler {
 	// router - controller
 	mux := http.NewServeMux()
 
@@ -15,5 +15,5 @@ func (app *application) routes() *http.ServeMux {
 
 	mux.HandleFunc("/download", app.downloadLogo)
 
-	return mux
+	return secureHeaders(mux)
 }

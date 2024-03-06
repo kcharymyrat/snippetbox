@@ -67,7 +67,7 @@ func main() {
 		templateCache: templateCache,
 	}
 
-	// Initialize a new http.Server
+	// Initialize a new http.ServerP
 	srv := &http.Server{
 		Addr:     *addr,
 		ErrorLog: errorLog,
