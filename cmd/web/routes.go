@@ -15,5 +15,5 @@ func (app *application) routes() http.Handler {
 
 	mux.HandleFunc("/download", app.downloadLogo)
 
-	return secureHeaders(mux)
+	return app.logRequest(secureHeaders(mux))
 }
