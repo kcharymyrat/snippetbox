@@ -4,13 +4,23 @@ import (
 	"fmt"
 	"html/template"
 	"path/filepath"
+	"time"
 
 	"snippetbox.charygarry.net/internal/models"
 )
 
 type templateData struct {
-	Snippet  *models.Snippet
-	Snippets []*models.Snippet
+	CurrentYear int
+	Snippet     *models.Snippet
+	Snippets    []*models.Snippet
+}
+
+func humanDate(t time.Time) string {
+	return t.Format("02 Jan 2006 at 15:04")
+}
+
+var functions = template.FuncMap{
+	"humanDate": humanDate,
 }
 
 func newTemplateCache() (map[string]*template.Template, error) {
@@ -29,7 +39,7 @@ func newTemplateCache() (map[string]*template.Template, error) {
 		fmt.Printf("page = %v\n", page)
 
 		// Parse the base template file into a template set.
-		ts, err := template.ParseFiles("./ui/html/base.html")
+		ts, err := template.New(name).Funcs(functions).ParseFiles("./ui/html/base.html")
 		if err != nil {
 			return nil, err
 		}
