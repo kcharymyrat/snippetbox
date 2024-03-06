@@ -1,6 +1,10 @@
 package main
 
-import "net/http"
+import (
+	"net/http"
+
+	"github.com/justinas/alice"
+)
 
 func (app *application) routes() http.Handler {
 	// router - controller
@@ -15,5 +19,7 @@ func (app *application) routes() http.Handler {
 
 	mux.HandleFunc("/download", app.downloadLogo)
 
-	return app.logRequest(secureHeaders(mux))
+	// return app.recoverPanic(app.logRequest(secureHeaders(mux)))
+	standard := alice.New(app.recoverPanic, app.logRequest, secureHeaders)
+	return standard.Then(mux)
 }
