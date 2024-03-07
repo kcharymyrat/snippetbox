@@ -3,23 +3,30 @@ package main
 import (
 	"net/http"
 
+	"github.com/julienschmidt/httprouter"
 	"github.com/justinas/alice"
 )
 
 func (app *application) routes() http.Handler {
-	// router - controller
-	mux := http.NewServeMux()
+	// Initialize the router.
+	router := httprouter.New()
 
-	filseServer := http.FileServer(http.Dir("./ui/static/"))
-	mux.Handle("/static/", http.StripPrefix("/static", filseServer))
+	// Custom 404 handler
+	router.NotFound = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		app.notFound(w)
+	})
 
-	mux.HandleFunc("/", app.home)
-	mux.HandleFunc("/snippet/view", app.snippetView)
-	mux.HandleFunc("/snippet/create", app.snippetCreate)
+	fileServer := http.FileServer(http.Dir("./ui/static/"))
+	router.Handler(http.MethodGet, "/static/*filepath", http.StripPrefix("/static", fileServer))
 
-	mux.HandleFunc("/download", app.downloadLogo)
+	router.HandlerFunc(http.MethodGet, "/", app.home)
+	router.HandlerFunc(http.MethodGet, "/snippet/view/:id", app.snippetView)
+	router.HandlerFunc(http.MethodGet, "/snippet/create", app.snippetCreate)
+	router.HandlerFunc(http.MethodPost, "/snippet/create", app.snippetCreatePost)
+
+	router.HandlerFunc(http.MethodGet, "/download", app.downloadLogo)
 
 	// return app.recoverPanic(app.logRequest(secureHeaders(mux)))
 	standard := alice.New(app.recoverPanic, app.logRequest, secureHeaders)
-	return standard.Then(mux)
+	return standard.Then(router)
 }
