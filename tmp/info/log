@@ -111,3 +111,7 @@ INFO	2024/03/07 09:09:56 [::1]:54383 - HTTP/1.1 POST /snippet/create
 INFO	2024/03/07 09:10:03 [::1]:54383 - HTTP/1.1 POST /snippet/create
 INFO	2024/03/07 09:10:03 [::1]:54383 - HTTP/1.1 GET /snippet/view/11
 INFO	2024/03/07 09:10:05 [::1]:54383 - HTTP/1.1 GET /
+INFO	2024/03/07 10:03:18 Starting server on :4000
+INFO	2024/03/07 10:03:27 [::1]:56109 - HTTP/1.1 GET /snippet/create
+INFO	2024/03/07 10:03:30 [::1]:56109 - HTTP/1.1 POST /snippet/create
+INFO	2024/03/07 10:17:53 Starting server on :4000
