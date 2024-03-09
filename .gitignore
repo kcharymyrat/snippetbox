@@ -19,3 +19,14 @@
 
 # Custom docs, late to be deleted
 my_sql_commands.txt
+
+
+#https configs
+tls
+.tls
+tls/
+.tls/
+./tls
+.tls/*
+tls/*
+./tls/*

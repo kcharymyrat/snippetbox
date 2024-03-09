@@ -120,3 +120,13 @@ INFO	2024/03/09 08:31:45 [::1]:55043 - HTTP/1.1 GET /snippet/create
 INFO	2024/03/09 08:31:56 [::1]:55043 - HTTP/1.1 POST /snippet/create
 INFO	2024/03/09 08:31:57 [::1]:55043 - HTTP/1.1 GET /snippet/view/12
 INFO	2024/03/09 08:32:03 [::1]:55043 - HTTP/1.1 GET /snippet/view/12
+INFO	2024/03/09 09:17:43 Starting server on :4000
+INFO	2024/03/09 09:18:13 Starting server on :4000
+INFO	2024/03/09 09:19:10 [::1]:61587 - HTTP/2.0 GET /snippet/view/12
+INFO	2024/03/09 09:19:10 [::1]:61587 - HTTP/2.0 GET /static/css/main.css
+INFO	2024/03/09 09:19:10 [::1]:61587 - HTTP/2.0 GET /static/js/main.js
+INFO	2024/03/09 09:19:11 [::1]:61587 - HTTP/2.0 GET /static/img/logo.png
+INFO	2024/03/09 09:19:12 [::1]:61587 - HTTP/2.0 GET /static/img/favicon.ico
+INFO	2024/03/09 09:22:58 [::1]:61587 - HTTP/2.0 GET /static/css/main.css
+INFO	2024/03/09 09:27:04 [::1]:61587 - HTTP/2.0 GET /snippet/view/12
+INFO	2024/03/09 09:27:04 [::1]:61587 - HTTP/2.0 GET /static/img/favicon.ico
