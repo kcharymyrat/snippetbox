@@ -226,3 +226,6 @@ INFO	2024/03/11 09:07:05 [::1]:63509 - HTTP/2.0 GET /static/img/favicon.ico
 INFO	2024/03/11 09:07:11 [::1]:63509 - HTTP/2.0 GET /snippet/create
 INFO	2024/03/11 09:07:11 [::1]:63509 - HTTP/2.0 GET /user/login
 INFO	2024/03/11 09:07:31 127.0.0.1:63804 - HTTP/2.0 POST /snippet/create
+INFO	2024/03/11 10:20:59 Starting server on :4000
+INFO	2024/03/11 10:21:06 [::1]:58068 - HTTP/2.0 GET /user/login
+INFO	2024/03/11 10:21:06 [::1]:58068 - HTTP/2.0 GET /static/img/favicon.ico
