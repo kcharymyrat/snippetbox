@@ -197,3 +197,32 @@ INFO	2024/03/11 08:32:13 [::1]:65033 - HTTP/2.0 GET /static/img/favicon.ico
 INFO	2024/03/11 08:32:14 [::1]:65033 - HTTP/2.0 GET /snippet/create
 INFO	2024/03/11 08:32:17 [::1]:65033 - HTTP/2.0 POST /user/logout
 INFO	2024/03/11 08:32:17 [::1]:65033 - HTTP/2.0 GET /
+INFO	2024/03/11 08:45:35 Starting server on :4000
+INFO	2024/03/11 08:45:40 [::1]:61274 - HTTP/2.0 GET /
+INFO	2024/03/11 08:50:49 Starting server on :4000
+INFO	2024/03/11 08:50:52 [::1]:49233 - HTTP/2.0 GET /
+INFO	2024/03/11 08:50:52 [::1]:49233 - HTTP/2.0 GET /static/css/main.css
+INFO	2024/03/11 08:50:52 [::1]:49233 - HTTP/2.0 GET /static/js/main.js
+INFO	2024/03/11 08:50:53 [::1]:49233 - HTTP/2.0 GET /static/img/logo.png
+INFO	2024/03/11 08:50:53 [::1]:49233 - HTTP/2.0 GET /static/img/favicon.ico
+INFO	2024/03/11 08:50:56 [::1]:49233 - HTTP/2.0 GET /user/login
+INFO	2024/03/11 08:51:04 [::1]:49233 - HTTP/2.0 POST /user/login
+INFO	2024/03/11 08:51:04 [::1]:49233 - HTTP/2.0 GET /snippet/create
+INFO	2024/03/11 08:51:07 [::1]:49233 - HTTP/2.0 GET /
+INFO	2024/03/11 08:51:09 [::1]:49233 - HTTP/2.0 GET /snippet/create
+INFO	2024/03/11 08:51:12 [::1]:49233 - HTTP/2.0 POST /user/logout
+INFO	2024/03/11 08:51:12 [::1]:49233 - HTTP/2.0 GET /
+INFO	2024/03/11 08:51:15 [::1]:49233 - HTTP/2.0 GET /snippet/create
+INFO	2024/03/11 08:51:17 [::1]:49233 - HTTP/2.0 GET /snippet/create
+INFO	2024/03/11 08:51:17 [::1]:49233 - HTTP/2.0 GET /static/img/favicon.ico
+INFO	2024/03/11 08:51:23 [::1]:49233 - HTTP/2.0 GET /snippet/create
+INFO	2024/03/11 08:51:23 [::1]:49233 - HTTP/2.0 GET /static/img/favicon.ico
+INFO	2024/03/11 08:51:25 [::1]:49233 - HTTP/2.0 GET /user/login
+INFO	2024/03/11 08:51:27 [::1]:49233 - HTTP/2.0 GET /user/signup
+INFO	2024/03/11 08:51:28 [::1]:49233 - HTTP/2.0 GET /
+INFO	2024/03/11 09:07:01 Starting server on :4000
+INFO	2024/03/11 09:07:05 [::1]:63509 - HTTP/2.0 GET /
+INFO	2024/03/11 09:07:05 [::1]:63509 - HTTP/2.0 GET /static/img/favicon.ico
+INFO	2024/03/11 09:07:11 [::1]:63509 - HTTP/2.0 GET /snippet/create
+INFO	2024/03/11 09:07:11 [::1]:63509 - HTTP/2.0 GET /user/login
+INFO	2024/03/11 09:07:31 127.0.0.1:63804 - HTTP/2.0 POST /snippet/create
