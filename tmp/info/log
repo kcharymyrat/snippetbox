@@ -229,3 +229,25 @@ INFO	2024/03/11 09:07:31 127.0.0.1:63804 - HTTP/2.0 POST /snippet/create
 INFO	2024/03/11 10:20:59 Starting server on :4000
 INFO	2024/03/11 10:21:06 [::1]:58068 - HTTP/2.0 GET /user/login
 INFO	2024/03/11 10:21:06 [::1]:58068 - HTTP/2.0 GET /static/img/favicon.ico
+INFO	2024/03/16 07:52:13 Starting server on :4000
+INFO	2024/03/16 07:52:17 [::1]:62876 - HTTP/2.0 GET /user/login
+INFO	2024/03/16 07:52:17 [::1]:62876 - HTTP/2.0 GET /static/css/main.css
+INFO	2024/03/16 07:52:17 [::1]:62876 - HTTP/2.0 GET /static/js/main.js
+INFO	2024/03/16 07:52:17 [::1]:62876 - HTTP/2.0 GET /static/img/logo.png
+INFO	2024/03/16 07:52:18 [::1]:62876 - HTTP/2.0 GET /static/img/favicon.ico
+INFO	2024/03/16 07:52:19 [::1]:62876 - HTTP/2.0 GET /user/login
+INFO	2024/03/16 07:52:19 [::1]:62876 - HTTP/2.0 GET /static/css/main.css
+INFO	2024/03/16 07:52:19 [::1]:62876 - HTTP/2.0 GET /static/js/main.js
+INFO	2024/03/16 07:52:19 [::1]:62876 - HTTP/2.0 GET /static/img/logo.png
+INFO	2024/03/16 07:52:21 [::1]:62876 - HTTP/2.0 GET /
+INFO	2024/03/16 07:52:21 [::1]:62876 - HTTP/2.0 GET /static/css/main.css
+INFO	2024/03/16 07:52:21 [::1]:62876 - HTTP/2.0 GET /static/js/main.js
+INFO	2024/03/16 07:52:21 [::1]:62876 - HTTP/2.0 GET /static/img/logo.png
+INFO	2024/03/16 07:52:23 [::1]:62876 - HTTP/2.0 GET /snippet/view/12
+INFO	2024/03/16 07:52:23 [::1]:62876 - HTTP/2.0 GET /static/css/main.css
+INFO	2024/03/16 07:52:23 [::1]:62876 - HTTP/2.0 GET /static/js/main.js
+INFO	2024/03/16 07:52:23 [::1]:62876 - HTTP/2.0 GET /static/img/logo.png
+INFO	2024/03/16 07:52:25 [::1]:62876 - HTTP/2.0 GET /
+INFO	2024/03/16 07:52:25 [::1]:62876 - HTTP/2.0 GET /static/css/main.css
+INFO	2024/03/16 07:52:25 [::1]:62876 - HTTP/2.0 GET /static/js/main.js
+INFO	2024/03/16 07:52:25 [::1]:62876 - HTTP/2.0 GET /static/img/logo.png
