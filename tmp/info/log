@@ -251,3 +251,11 @@ INFO	2024/03/16 07:52:25 [::1]:62876 - HTTP/2.0 GET /
 INFO	2024/03/16 07:52:25 [::1]:62876 - HTTP/2.0 GET /static/css/main.css
 INFO	2024/03/16 07:52:25 [::1]:62876 - HTTP/2.0 GET /static/js/main.js
 INFO	2024/03/16 07:52:25 [::1]:62876 - HTTP/2.0 GET /static/img/logo.png
+INFO	2024/03/16 08:19:26 Starting server on :4000
+INFO	2024/03/16 08:24:28 Starting server on :4000
+INFO	2024/03/16 08:24:36 [::1]:55141 - HTTP/2.0 GET /
+INFO	2024/03/16 08:24:36 [::1]:55141 - HTTP/2.0 GET /static/css/main.css
+INFO	2024/03/16 08:24:36 [::1]:55141 - HTTP/2.0 GET /static/js/main.js
+INFO	2024/03/16 08:24:36 [::1]:55141 - HTTP/2.0 GET /static/img/logo.png
+INFO	2024/03/16 08:24:36 [::1]:55141 - HTTP/2.0 GET /static/img/favicon.ico
+INFO	2024/03/16 08:26:08 Starting server on :4000
